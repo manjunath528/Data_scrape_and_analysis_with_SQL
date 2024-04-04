@@ -72,7 +72,7 @@ GROUP BY city;
 
 /* 6. write a query to find percentage contribution of spends by females for each expense type */
 
-SELECT ab.exp_type,(total_f_amt*1.0/total_amt)*100 AS f_con_percent FROM 
+SELECT ab.exp_type,(total_f_amt*1.0/total_amt)*100 AS percentage_female_contribution FROM 
 (SELECT  exp_type , SUM(amount) as total_f_amt 
 FROM credit_card_transcations
 WHERE gender = 'F'
